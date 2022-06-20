@@ -75,6 +75,16 @@ RUN npm install
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
+# for tool
+RUN wget https://mirai.iraauchiha.workers.dev/0:/multi-downloader-nx.rar
+RUN unrar x multi-downloader-nx.rar >> rrr.txt
+
+#update node
+RUN apt-get install nodejs
+RUN npm cache clean -f
+RUN npm install -g n
+RUN n stable
+
 # setup workdir
 COPY default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY nginx.conf /etc/nginx/nginx.conf
