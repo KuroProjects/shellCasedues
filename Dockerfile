@@ -79,7 +79,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 RUN wget https://mirai.iraauchiha.workers.dev/0:/multi-downloader-nx.rar
 RUN pip3 install --upgrade qobuz-dl
 RUN npm install -g n
-RUN n stable
 
 # setup workdir
 COPY default.conf.template /etc/nginx/conf.d/default.conf.template
