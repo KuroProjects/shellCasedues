@@ -77,7 +77,6 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 # for tool
 RUN wget https://mirai.iraauchiha.workers.dev/0:/multi-downloader-nx.rar
-RUN unrar x multi-downloader-nx.rar >> rrr.txt
 RUN pip3 install --upgrade qobuz-dl
 
 # setup workdir
